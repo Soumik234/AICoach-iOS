@@ -1,0 +1,127 @@
+AI Coach - SwiftUI iOS App Setup Instructions
+==============================================
+
+IMPORTANT: This SwiftUI project cannot run in Replit. You need to use Xcode on macOS.
+
+PHASE 1 - PROJECT SETUP (COMPLETED)
+------------------------------------
+
+✅ Folder Structure Created:
+   - Views/Authentication/
+   - Views/Dashboard/
+   - Views/Learning/
+   - Views/Simulators/
+   - Views/Roleplay/
+   - Views/Profile/
+   - Models/
+   - Components/
+   - Design/
+
+✅ Global Theme Defined:
+   - Design/AppColors.swift (colors, gradients)
+   - Design/Typography.swift (SF Pro fonts)
+   - Design/Gradients.swift (gradient presets)
+
+✅ TabView Navigation:
+   - Views/MainTabView.swift (5 tabs: Dashboard | Learning | AI Simulators | AI Roleplay | Profile)
+
+✅ Dependencies Listed:
+   - Package.swift includes:
+     * Firebase Auth, Firestore, Storage
+     * Google Sign-In
+     * Lottie (animations)
+     * Charts
+
+HOW TO USE THESE FILES IN XCODE
+--------------------------------
+
+1. Create a new iOS App project in Xcode:
+   - Open Xcode
+   - File > New > Project
+   - Choose "iOS App"
+   - Product Name: AICoach
+   - Interface: SwiftUI
+   - Language: Swift
+   - Click Create
+
+2. Copy all .swift files from this Replit to your Xcode project:
+   - Drag and drop all files into your Xcode project navigator
+   - Maintain the folder structure
+
+3. Add Dependencies:
+   - In Xcode, go to File > Add Package Dependencies
+   - Add each dependency from Package.swift:
+     * https://github.com/firebase/firebase-ios-sdk.git
+     * https://github.com/google/GoogleSignIn-iOS
+     * https://github.com/airbnb/lottie-ios.git
+     * https://github.com/danielgindi/Charts.git
+
+4. Configure Firebase:
+   - Go to https://console.firebase.google.com
+   - Create a new project
+   - Add an iOS app
+   - Download GoogleService-Info.plist
+   - Add it to your Xcode project
+
+5. Enable Sign in with Apple:
+   - In Xcode, select your project target
+   - Go to "Signing & Capabilities"
+   - Click "+ Capability"
+   - Add "Sign in with Apple"
+
+6. Configure Google Sign-In:
+   - Add your Google Sign-In client ID to Info.plist
+   - Add URL schemes for Google Sign-In
+
+7. Build and Run:
+   - Select your target device or simulator
+   - Press Cmd+R to build and run
+
+WHAT'S INCLUDED
+---------------
+
+✅ Login View with:
+   - Email/Password authentication
+   - Sign in with Apple
+   - Google Sign-In integration
+   - Modern iOS design
+
+✅ Dashboard with:
+   - Progress overview with circular progress rings
+   - Metrics grid (completed sessions, scores, time spent)
+   - Quick actions
+   - AI recommendations
+
+✅ Learning Path View with:
+   - Course cards with progress indicators
+   - Filtering by skill/difficulty/progress
+   - Search functionality
+   - Tags and difficulty levels
+
+✅ AI Simulators View with:
+   - Scenario-based learning cards
+   - Category filtering
+   - Session count and average scores
+
+✅ AI Roleplay View with:
+   - New session options
+   - Recent session history
+   - Session analytics
+
+✅ Profile View with:
+   - User information
+   - Badges and achievements
+   - Learning statistics
+   - Settings and sign out
+
+All views follow modern iOS design principles with SF Pro typography,
+light theme, subtle gradients, and gamification elements.
+
+NEXT STEPS (Future Phases)
+---------------------------
+- Integrate real Firebase authentication
+- Implement AI backend for generating learning paths
+- Add voice interaction for roleplay
+- Implement data persistence with Core Data
+- Add real-time progress tracking
+- Create detailed analytics dashboard
