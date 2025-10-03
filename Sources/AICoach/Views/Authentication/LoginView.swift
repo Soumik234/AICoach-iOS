@@ -86,19 +86,22 @@ struct LoginView: View {
                     }
                     .padding(.vertical, 8)
                     
-                    SignInWithAppleButton(.signIn) { request in
-                        request.requestedScopes = [.fullName, .email]
-                    } onCompletion: { result in
-                        switch result {
-                        case .success(let authorization):
-                            authManager.signInWithApple(authorization: authorization)
-                        case .failure(let error):
-                            authManager.errorMessage = error.localizedDescription
+                    Button(action: {
+                        authManager.startSignInWithAppleFlow()
+                    }) {
+                        HStack(spacing: 12) {
+                            Image(systemName: "apple.logo")
+                                .font(.system(size: 20))
+                            
+                            Text("Continue with Apple")
+                                .font(.system(size: 16, weight: .semibold))
                         }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
                     }
-                    .signInWithAppleButtonStyle(.black)
-                    .frame(height: 50)
-                    .cornerRadius(12)
                     
                     SocialButton(
                         title: "Continue with Google",

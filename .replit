@@ -1,2 +1,25 @@
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "SwiftUI Info"
+
+[[workflows.workflow]]
+name = "SwiftUI Info"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./xcode-instructions.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
