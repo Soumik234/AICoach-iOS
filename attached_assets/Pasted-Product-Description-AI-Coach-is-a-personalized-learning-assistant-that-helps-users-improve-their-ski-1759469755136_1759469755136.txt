@@ -1,0 +1,101 @@
+Product Description
+AI Coach is a personalized learning assistant that helps users improve their skills through:
+
+Preset & Custom Learning Paths
+
+AI-Driven Simulators (Scenario-based learning)
+
+AI Roleplay (Interactive practice sessions)
+
+Progress Tracking with metrics, badges, and achievements
+
+The app is designed to make learning engaging, adaptive, and gamified.
+
+It should be ios app using swiftui perperably
+
+Design Requirements
+2.1 Overall Design Philosophy
+Modern, clean, and intuitive UI.
+
+Tab-based navigation: Dashboard | Learning | AI Simulators | AI Roleplay | Profile/Settings.
+
+Personalized and adaptive experience with AI-driven recommendations.
+
+Gamification: avatars, badges, progress rings, scorecards.
+
+2.2 Core Screens & Flows
+
+A. Authentication Flow
+
+Minimal UI, logo + tagline.
+
+Sign-in via Email/Password, Apple SSO, Google SSO.
+
+B. Dashboard
+
+Progress overview (circular progress/timeline).
+
+Metrics: completed sessions, scores, time spent.
+
+Quick actions + AI recommendations.
+
+C. Learning Path Creation
+
+Preset Path: choose predefined tracks, see outcomes.
+
+Custom Path: 3 steps → Info → Skills → Review.
+
+Generated path feeds into Learning, Simulators, Roleplay.
+
+D. Learning Tab
+
+Personalized course cards (title, tags, difficulty, progress).
+
+Filters by skill, difficulty, progress.
+
+E. AI Simulators Tab
+
+Scenario-based learning with MCQs or text.
+
+Adaptive branching questions.
+
+Scoreboard + progress meter.
+
+F. AI Roleplay Tab
+
+Prebuilt & custom roleplays.
+
+Chat-style interface with avatars.
+
+Voice/text interaction.
+
+Session analytics, logs, and history.
+
+G. Profile/Settings
+
+User info, learning goals.
+
+Badges, achievements.
+
+Notifications, difficulty, language preferences.
+
+2.3 Visual & Interaction Design Notes
+
+Theme: light, modern, subtle gradients.
+
+Typography: SF Pro.
+
+Avatars/icons: rounded, friendly.
+
+Animations for gamification.
+
+Functional Requirements
+AI generation of custom learning paths.
+
+Adaptive simulators & roleplays.
+
+Real-time progress tracking.
+
+Voice/text interaction with AI.
+
+Save & replay sessions.
